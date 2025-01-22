@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test module 1</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/js/script.js">
+</head>
+
+<body>
+    <div class="group">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name">
+        <label for="value">Value</label>
+        <input type="number" name="value" id="value">
+        <button id="add" onclick="AddTransaction()"></button>Add</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Value</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="transaction-list"></tbody>
+        <td>0</td>
+        <td>Aquaflask</td>
+        <td>1000</td>
+        <td>
+            <button id="add">X</button>
+        </td>
+    </table>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
+
