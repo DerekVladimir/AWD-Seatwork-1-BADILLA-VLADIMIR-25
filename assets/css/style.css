@@ -1,91 +1,63 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    background: url('https://static.vecteezy.com/system/resources/previews/010/518/840/original/digital-finance-and-banking-service-in-futuristic-background-bank-building-with-online-payment-transaction-secure-money-and-financial-innovation-technology-vector.jpg') no-repeat center center fixed;
+    background-size: cover;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.6); /* Adjusted opacity */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
     color: #333;
 }
 
-.container {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
 }
 
-h1, h3 {
-    text-align: center;
-    color: #444;
-}
-
-p {
-    font-size: 18px;
-    text-align: center;
-    margin: 15px 0;
-    color: #4caf50;
-}
-
-form {
-    margin: 20px 0;
-}
-
-label {
+.input-group label {
     display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
+    margin-bottom: 5px;
     color: #555;
 }
 
-input[type="number"] {
-    width: calc(100% - 20px);
+.input-group input {
+    width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    border-color: #007BFF;
+    outline: none;
 }
 
 button {
-    padding: 10px 15px;
-    margin: 5px 0;
-    width: calc(50% - 10px);
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
-    color: #fff;
     cursor: pointer;
-}
-
-#deposit {
-    background-color: #4caf50;
-}
-
-#withdraw {
-    background-color: #f44336;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    opacity: 0.8;
+    background-color: #0056b3;
 }
-
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border-top: 1px solid #ddd;
-}
-
-li {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    font-size: 16px;
-    colot: #555;
-}
-
-li:last-child {
-    border-bottom: none;
-}
-
-
