@@ -6,11 +6,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const balanceDisplay = document.getElementById("balance"); 
     const transactionHistory = document.getElementById("transactionHistory");
     const amountInput = document.getElementById("amount");
+    
+    // Save transactions to localStorage
     const saveTransactions = () => {
         localStorage.setItem("transactions", JSON.stringify(transaction));
     };
 
-    //for balance display
+    // Load transactions from localStorage
     const loadTransactions = () => {
         const savedTransactions = localStorage.getItem("transactions");
         if (savedTransactions) {
@@ -21,10 +23,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
+    // Update balance display
     const updateBalance = () => {
         balanceDisplay.textContent = balance.toFixed(2);
     };
 
+    // Render transaction history
     const renderTransaction = () => {
         transactionHistory.innerHTML = "";
         transaction.forEach((transaction) => {
@@ -34,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
+    // Add a new transaction
     const addTransaction = (type, amount) => {
         if (type === "Withdraw" && amount > balance) {
             alert("Insufficient balance");
@@ -47,6 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
         saveTransactions(); // Save transactions to localStorage
     };
 
+    // Clear all transactions
     const clearTransactions = () => {
         transaction = [];
         balance = 5000;
@@ -55,6 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
         saveTransactions(); // Save the cleared state to localStorage
     };
 
+    // Event listeners for deposit, withdraw, and clear buttons
     document.getElementById("deposit").addEventListener("click", () => {
         const amount = parseFloat(amountInput.value);
         if (!isNaN(amount) && amount > 0) {
@@ -79,9 +86,5 @@ document.addEventListener("DOMContentLoaded", () => {
         clearTransactions();
     });
 
-    loadTransactions(); // Load transactions from localStorage
-    updateBalance();
-    renderTransaction();
+    loadTransactions(); // Load transactions from localStorage when the page loads
 });
-
-
