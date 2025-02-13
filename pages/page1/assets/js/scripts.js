@@ -82,9 +82,12 @@ document.addEventListener("DOMContentLoaded", () => {
         amountInput.value = "";
     });
 
-    document.getElementById("clear").addEventListener("click", () => {
-        clearTransactions();
-    });
+    const clearButton = document.getElementById("clear");
+    if (clearButton) {
+        clearButton.addEventListener("click", () => {
+            clearTransactions();
+        });
+    }
 
     loadTransactions(); // Load transactions from localStorage when the page loads
 });
